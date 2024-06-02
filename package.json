@@ -1,0 +1,57 @@
+{
+  "name": "whalevocal",
+  "version": "1.0.0",
+  "description": "Octobug's blog.",
+  "main": "index.js",
+  "type": "module",
+  "engines" : { 
+    "node" : ">=18.0.0"
+  },
+  "scripts": {
+    "dev": "vitepress dev --host",
+    "build": "vitepress build",
+    "preview": "vitepress preview",
+    "eslint": "eslint .",
+    "mdlint": "markdownlint .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.md": "markdownlint",
+    "*.{ts,vue}": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Octobug/blog.git"
+  },
+  "keywords": [
+    "Octobug"
+  ],
+  "author": "Octobug",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Octobug/blog/issues"
+  },
+  "homepage": "https://github.com/Octobug/blog#readme",
+  "devDependencies": {
+    "@giscus/vue": "^2.4.0",
+    "@types/node": "^20.8.10",
+    "@typescript-eslint/eslint-plugin": "^6.7.2",
+    "@typescript-eslint/parser": "^6.7.2",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.50.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "feed": "^4.2.2",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-image-figures": "^2.1.1",
+    "markdown-it-mathjax3": "^4.3.2",
+    "markdownlint-cli": "^0.37.0",
+    "mermaid": "^10.9.0",
+    "moment-timezone": "^0.5.43",
+    "reading-time": "^1.5.0",
+    "typescript": "^5.2.2",
+    "vitepress": "^1.1.3",
+    "vitepress-plugin-mermaid": "^2.0.16"
+  }
+}
