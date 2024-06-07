@@ -4,63 +4,71 @@ import emailSVGString from "./theme/svgs/email";
 import { giscus, withBaseURL } from "./config.utils";
 
 export default {
-  outline: "deep",
+  outline: {
+    level: "deep",
+    label: "目录"
+  },
   docFooter: {
-    prev: "Previous",
-    next: "Next",
+    prev: "上一篇",
+    next: "下一篇",
   },
-  editLink: {
-    pattern: "https://github.com/Octobug/blog/edit/main/:path",
-  },
+  // editLink: {
+  //   pattern: "https://github.com/weedsx/weedsx.github.io/edit/main/:path",
+  // },
   footer: {
-    message: 'All original contents are licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.',
-    copyright: `© 2019-${new Date().getFullYear()} <a href="https://github.com/Octobug">Shaobiao Lin</a>`,
+    // message: 'All original contents are licensed under <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.',
+    message: '所有原创内容均在 <a href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> 下获得许可',
+    copyright: `© 2024-${new Date().getFullYear()} <a href="https://github.com/weedsx">Howard Liu</a>`,
   },
-  lastUpdated: {
-    formatOptions: {
-      dateStyle: "medium",
-      timeStyle: "short",
-    },
-  },
+  // lastUpdated: {
+  //   formatOptions: {
+  //     dateStyle: "medium",
+  //     timeStyle: "short",
+  //   },
+  // },
   nav: [
     {
       text: "POSTS",
       link: "/posts",
     },
     {
-      text: "SORTS",
-      link: "/sorts",
+      text: "Github Resource",
+      link: "https://github.com/weedsx",
     },
     {
-      text: "TAGS",
-      link: "/tags",
-    },
+      text: "语雀",
+      link: "https://www.yuque.com/weedsx",
+    }
+    // {
+    //   text: "SORTS",
+    //   link: "/sorts",
+    // },
+    // {
+    //   text: "TAGS",
+    //   link: "/tags",
+    // },
     // {
     //   text: "VISIONS",
     //   link: "/pages/visions",
     // },
-    {
-      text: "MORE",
-      items: [
-        {
-          text: "Acknowledgments",
-          link: "/acknowledgments",
-        },
-        {
-          text: "Blogmarks",
-          link: "/blogmarks",
-        },
-        {
-          text: "Atom Feed",
-          link: withBaseURL("/atom.xml"),
-          target: "_blank",
-        },
-        {
-          text: "This Repository",
-          link: "https://github.com/Octobug/blog",
-        }
-      ]
-    }
+    // {
+    //   text: "MORE",
+    //   items: [
+    //     {
+    //       text: "Acknowledgments",
+    //       link: "/acknowledgments",
+    //     },
+    //     {
+    //       text: "Blogmarks",
+    //       link: "/blogmarks",
+    //     },
+    //     {
+    //       text: "Atom Feed",
+    //       link: withBaseURL("/atom.xml"),
+    //       target: "_blank",
+    //     }
+    //   ]
+    // }
   ],
   search: {
     provider: "local",
@@ -84,20 +92,21 @@ export default {
     },
   },
   socialLinks: [
-    { icon: "github", link: "https://github.com/Octobug" },
-    { icon: "mastodon", link: "https://mastodon.online/@cyberwarmth" },
+    { icon: "github", link: "https://github.com/weedsx" },
+    // { icon: "mastodon", link: "https://mastodon.online/@cyberwarmth" },
     {
       icon: {
         svg: emailSVGString,
       },
-      link: "mailto:whalevocal@gmail.com",
+      link: "mailto:fyisgod@126.com",
     },
   ],
   // Extended configs
   avatar: withBaseURL("/avatar.png"),
-  nickname: "Orca",
-  bio: "Thoughts on everything.",
-  location: "Shenzhen, China",
+  nickname: "HowardLiu",
+  firstHalfBio: "长安城里的一切已经结束",
+  secondHalfBio: "一切都在无可挽回地走向庸俗",
+  // location: "Shenzhen, China",
   timezone: "Asia/Shanghai",
   pageSize: 10,
   mdfilePatterns: ["posts/**/*.md"],

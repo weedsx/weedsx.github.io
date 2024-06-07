@@ -12,28 +12,28 @@
     >
       {{ moment(post.datetime).format("LL") }}
     </span>
-    <Dot
-      v-if="post.spot"
-      :class="$style.dot"
-    />
-    <span
-      v-if="post.spot"
-      :class="$style.elementItem"
-      :tooltip="post.location?.district"
-    >
-      {{ `${post.location?.city || ""} ${post.spot}` }}
-    </span>
-    <Dot
-      v-if="post.readingTime"
-      :class="$style.dot"
-    />
-    <span
-      v-if="post.readingTime"
-      :class="$style.elementItem"
-      :tooltip="`${post.words} words`"
-    >
-      {{ post.readingTime }}
-    </span>
+<!--    <Dot-->
+<!--      v-if="post.spot"-->
+<!--      :class="$style.dot"-->
+<!--    />-->
+<!--    <span-->
+<!--      v-if="post.spot"-->
+<!--      :class="$style.elementItem"-->
+<!--      :tooltip="post.location?.district"-->
+<!--    >-->
+<!--      {{ `${post.location?.city || ""} ${post.spot}` }}-->
+<!--    </span>-->
+<!--    <Dot-->
+<!--      v-if="post.readingTime"-->
+<!--      :class="$style.dot"-->
+<!--    />-->
+<!--    <span-->
+<!--      v-if="post.readingTime"-->
+<!--      :class="$style.elementItem"-->
+<!--      :tooltip="`${post.words} words`"-->
+<!--    >-->
+<!--      {{ post.readingTime }}-->
+<!--    </span>-->
   </div>
 </template>
 

@@ -45,7 +45,7 @@ function appendReferenceHostname(md: MarkdownRenderer) {
 function renderReferenceSection(md: MarkdownRenderer) {
   md.renderer.rules.footnote_block_open = (_tks, _idx, _opts, env) => {
     const { frontmatter } = env;
-    const title = frontmatter.footnote || "References";
+    const title = frontmatter.footnote || "引用";
     return `
       <h2 id="footnote">
         ${title}

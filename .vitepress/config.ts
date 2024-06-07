@@ -8,17 +8,16 @@ import { buildFeed } from "./theme/feed";
 import useMDItPlugins from "./theme/mdit";
 
 const config = defineConfigWithTheme<ThemeConfig>({
-  title: "WhaleVocal",
-  description: "Octobug's blog.",
+  title: "HL",
+  description: "HowardLiu 的博客",
   base: BASE_PATH,
   cleanUrls: true,
-  lastUpdated: true,
   head: [
     [
       "meta",
       {
         name: "author",
-        content: "Octobug",
+        content: "HowardLiu",
       },
     ],
     [
@@ -27,15 +26,8 @@ const config = defineConfigWithTheme<ThemeConfig>({
         rel: "icon",
         type: "image/png",
         href: withBaseURL("/avatar.png")
+        // href: withBaseURL("/favicon.ico")
       },
-    ],
-    [
-      "link",
-      {
-        name: "mastodon",
-        rel: "me",
-        href: "https://mastodon.online/@cyberwarmth",
-      }
     ],
     ...gaConfig
   ],

@@ -12,7 +12,7 @@
       emit-metadata="0"
       input-position="top"
       :theme="giscusOptions.theme"
-      lang="en"
+      lang="zh-CN"
     />
   </div>
 </template>

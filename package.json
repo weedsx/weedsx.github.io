@@ -1,11 +1,11 @@
 {
-  "name": "whalevocal",
+  "name": "HL",
   "version": "1.0.0",
-  "description": "Octobug's blog.",
+  "description": "HowardLiu's blog.",
   "main": "index.js",
   "type": "module",
-  "engines" : { 
-    "node" : ">=18.0.0"
+  "engines": {
+    "node": ">=18.0.0"
   },
   "scripts": {
     "dev": "vitepress dev --host",
@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Octobug/blog.git"
+    "url": "git+https://github.com/weedsx/weedsx.github.io"
   },
   "keywords": [
     "Octobug"
@@ -29,9 +29,9 @@
   "author": "Octobug",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Octobug/blog/issues"
+    "url": "https://github.com/weedsx/weedsx.github.io/issues"
   },
-  "homepage": "https://github.com/Octobug/blog#readme",
+  "homepage": "https://github.com/weedsx/weedsx.github.io#readme",
   "devDependencies": {
     "@giscus/vue": "^2.4.0",
     "@types/node": "^20.8.10",
@@ -53,5 +53,8 @@
     "typescript": "^5.2.2",
     "vitepress": "^1.1.3",
     "vitepress-plugin-mermaid": "^2.0.16"
+  },
+  "dependencies": {
+    "moment": "^2.30.1"
   }
 }

@@ -9,7 +9,7 @@
         class="digit"
         :class="$style.number"
       >
-        {{ number }}
+        {{ number }} 篇
       </span>
     </div>
   </a>

@@ -21,8 +21,9 @@
 <script lang="ts" setup>
 import moment from "moment-timezone";
 import Post from "../types/post";
+import { onMounted } from "vue";
 
-defineProps({
+let props = defineProps({
   postList: {
     type: Array<Post>,
     default: []
@@ -31,6 +32,10 @@ defineProps({
     type: String,
     default: "ll"
   }
+});
+
+onMounted(()=>{
+  console.log(props.postList);
 });
 </script>
 

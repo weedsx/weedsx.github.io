@@ -6,7 +6,8 @@
     </h1>
     <p :class="$style.bio">
       <Dot />
-      <span>{{ bio }}</span>
+      <span>{{ firstHalfBio }}</span><br/>
+      <span>{{ secondHalfBio }}</span>
     </p>
     <ClientOnly>
       <ProfileExtra />
@@ -17,7 +18,7 @@
 <script lang="ts" setup>
 import { useData } from "vitepress";
 const { theme } = useData();
-const { nickname, bio } = theme.value;
+const { nickname, firstHalfBio, secondHalfBio } = theme.value;
 import Avatar from "./Avatar.vue";
 import Dot from "./Dot.vue";
 import ProfileExtra from "./ProfileExtra.vue";

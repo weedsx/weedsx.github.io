@@ -12,7 +12,7 @@
         :href="control.prev.link"
       >
         <span :class="$style.desc">
-          {{ theme.docFooter?.prev || 'Previous page' }}
+          {{ theme.docFooter?.prev || '上一篇' }}
         </span>
         <span :class="$style.title">
           {{ control.prev.text }}
@@ -26,7 +26,7 @@
         :href="control.next.link"
       >
         <span :class="$style.desc">
-          {{ theme.docFooter?.next || 'Next page' }}
+          {{ theme.docFooter?.next || '下一篇' }}
         </span>
         <span :class="$style.title">
           {{ control.next.text }}

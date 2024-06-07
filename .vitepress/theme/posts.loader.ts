@@ -3,7 +3,6 @@ import { createContentLoader } from "vitepress";
 import readingTime from "reading-time";
 import extendedConfig from "../config.theme";
 import { withBaseURL, isProduction } from "../config.utils";
-import getLocation from "./locations";
 
 // Title Workaround
 function extractTitle(text: string) {
@@ -29,11 +28,13 @@ export default async (options) => {
           const rt = readingTime(p.src || "");
           const mdpath = p.url.replace("/README", "");
           p.url = withBaseURL(mdpath);
-          p.frontmatter.title = extractTitle(p.src || "");
-          p.frontmatter.datetime = new Date(p.frontmatter.date);
-          p.frontmatter.location = getLocation(p.frontmatter.spot);
-          p.frontmatter.readingTime = rt.text;
-          p.frontmatter.words = rt.words;
+          // p.frontmatter.title = extractTitle(p.src || "");
+          p.frontmatter.title = p.frontmatter.title || "Untitled";
+          // p.frontmatter.datetime = new Date(p.frontmatter.date);
+          p.frontmatter.datetime = p.frontmatter.date;
+          // p.frontmatter.location = getLocation(p.frontmatter.spot);
+          // p.frontmatter.readingTime = rt.text;
+          // p.frontmatter.words = rt.words;
           p.frontmatter.mdpath = mdpath;
           return p;
         })

@@ -3,7 +3,7 @@
     <div :class="$style.main">
       <div :class="$style.badgeBox">
         <Badge
-          text="ALL"
+          text="总计"
           :number="allPosts.length"
           :link="false"
           :class="$style.disabled"

@@ -21,7 +21,7 @@ const { theme } = useData();
 }
 
 .avatar {
-  border-radius: 50%;
+  
   border: 2px solid var(--ct-avatar-border);
   width: var(--ct-avatar-medium);
   height: var(--ct-avatar-medium);

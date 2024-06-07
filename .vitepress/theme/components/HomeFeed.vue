@@ -12,7 +12,7 @@
       :class="[$style.pageButton, $style.previous]"
       @click="turnTo(page.cursor.value - 1)"
     >
-      PREV
+      上一页
     </button>
     <div
       v-if="page.total > 1"
@@ -26,7 +26,7 @@
       :class="[$style.pageButton, $style.next]"
       @click="turnTo(page.cursor.value + 1)"
     >
-      NEXT
+      下一页
     </button>
   </div>
 </template>
