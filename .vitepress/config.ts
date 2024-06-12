@@ -29,7 +29,7 @@ const config = defineConfigWithTheme<ThemeConfig>({
         // href: withBaseURL("/favicon.ico")
       },
     ],
-    ...gaConfig
+    // ...gaConfig
   ],
   rewrites: {
     "pages/:title.md": ":title.md",

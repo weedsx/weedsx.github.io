@@ -1,7 +1,7 @@
 {
   "name": "HL",
   "version": "1.0.0",
-  "description": "HowardLiu's blog.",
+  "description": "Howard Liu's blog.",
   "main": "index.js",
   "type": "module",
   "engines": {
@@ -11,12 +11,9 @@
     "dev": "vitepress dev --host",
     "build": "vitepress build",
     "preview": "vitepress preview",
-    "eslint": "eslint .",
-    "mdlint": "markdownlint .",
-    "prepare": "husky install"
+    "eslint": "eslint ."
   },
   "lint-staged": {
-    "*.md": "markdownlint",
     "*.{ts,vue}": "eslint"
   },
   "repository": {
@@ -24,9 +21,9 @@
     "url": "git+https://github.com/weedsx/weedsx.github.io"
   },
   "keywords": [
-    "Octobug"
+    "HowardLiu"
   ],
-  "author": "Octobug",
+  "author": "weedsx",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/weedsx/weedsx.github.io/issues"
@@ -53,8 +50,5 @@
     "typescript": "^5.2.2",
     "vitepress": "^1.1.3",
     "vitepress-plugin-mermaid": "^2.0.16"
-  },
-  "dependencies": {
-    "moment": "^2.30.1"
   }
 }

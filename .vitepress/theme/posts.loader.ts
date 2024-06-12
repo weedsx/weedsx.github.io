@@ -33,8 +33,8 @@ export default async (options) => {
           // p.frontmatter.datetime = new Date(p.frontmatter.date);
           p.frontmatter.datetime = p.frontmatter.date;
           // p.frontmatter.location = getLocation(p.frontmatter.spot);
-          // p.frontmatter.readingTime = rt.text;
-          // p.frontmatter.words = rt.words;
+          p.frontmatter.readingTime = rt.text;
+          p.frontmatter.words = rt.words;
           p.frontmatter.mdpath = mdpath;
           return p;
         })

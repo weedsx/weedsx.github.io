@@ -1,6 +1,6 @@
 <template>
   <div
-    v-if="post.datetime || post.spot || post.readingTime"
+    v-if="post.datetime || post.readingTime || post.words"
     name="post-elements"
     :class="$style.elementList"
     class="hide-scrollbar"
@@ -23,17 +23,27 @@
 <!--    >-->
 <!--      {{ `${post.location?.city || ""} ${post.spot}` }}-->
 <!--    </span>-->
-<!--    <Dot-->
-<!--      v-if="post.readingTime"-->
-<!--      :class="$style.dot"-->
-<!--    />-->
-<!--    <span-->
-<!--      v-if="post.readingTime"-->
-<!--      :class="$style.elementItem"-->
-<!--      :tooltip="`${post.words} words`"-->
-<!--    >-->
-<!--      {{ post.readingTime }}-->
-<!--    </span>-->
+    <Dot
+      v-if="post.readingTime"
+      :class="$style.dot"
+    />
+    <span
+      v-if="post.readingTime"
+      :class="$style.elementItem"
+      
+    >
+      {{ post.readingTime }}
+    </span>
+    <Dot
+      v-if="post.words"
+      :class="$style.dot"
+    />
+    <span
+      v-if="post.words"
+      :class="$style.elementItem"
+    >
+      {{ post.words }} 字
+    </span>
   </div>
 </template>
 

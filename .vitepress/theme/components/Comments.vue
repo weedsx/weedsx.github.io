@@ -2,7 +2,7 @@
   <div :class="$style.giscus">
     <Giscus
       v-if="giscusOptions.show"
-      repo="Octobug/blog"
+      repo="weedsx/weedsx.github.io"
       :repo-id="giscus.repo_id"
       category="Announcements"
       :category-id="giscus.category_id"

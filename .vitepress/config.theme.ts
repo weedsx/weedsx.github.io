@@ -33,7 +33,7 @@ export default {
     },
     {
       text: "Github Resource",
-      link: "https://github.com/weedsx",
+      link: "https://github.com/weedsx/weedsx.github.io",
     },
     {
       text: "语雀",
