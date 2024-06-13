@@ -10,7 +10,8 @@
       :class="$style.elementItem"
       :tooltip="moment(post.datetime).format('dddd')"
     >
-      {{ moment(post.datetime).format("LL") }}
+<!--      {{ moment(post.datetime).format("LL") }}-->
+      {{ date }}
     </span>
 <!--    <Dot-->
 <!--      v-if="post.spot"-->
@@ -30,9 +31,8 @@
     <span
       v-if="post.readingTime"
       :class="$style.elementItem"
-      
     >
-      {{ post.readingTime }}
+      {{ post.readingTime }} 分钟
     </span>
     <Dot
       v-if="post.words"
@@ -50,7 +50,7 @@
 <script lang="ts" setup>
 import moment from "moment-timezone";
 import { useData, onContentUpdated } from "vitepress";
-import { ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { data as allPosts } from "../posts.data";
 import { findPost } from "../utils";
 import Dot from "./Dot.vue";
@@ -62,8 +62,20 @@ function getPostData() {
   return findPost(allPosts, page.value)?.frontmatter || frontmatter.value;
 }
 
+let date = computed(()=>{
+  // 设置时区为上海
+  const date = moment.tz(post.value.datetime, "Asia/Shanghai");
+
+  // 格式化为中文日期格式
+  return  date.format("YYYY-MM-D");
+});
+
 onContentUpdated(() => {
   post.value = getPostData();
+});
+
+onMounted(()=>{
+  console.log(post.value.datetime);
 });
 </script>
 
